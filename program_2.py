@@ -10,7 +10,7 @@ app = Flask(__name__)
 def show_users():
     pass
 
-
+#display data
 @app.route('/get_employee', methods =['GET'])
 def get_data():
     client = MongoClient('localhost',27017)
@@ -24,6 +24,7 @@ def get_data():
     return jsonify({'workers':data})
 
 
+#insert data/try create form 
 @app.route('/insert_employee',methods = ['POST'])
 def new_worker():
     client = MongoClient('localhost',27017)
