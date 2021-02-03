@@ -24,7 +24,7 @@ def get_data():
     return jsonify({'workers':data})
 
 
-#insert data/try create form 
+#insert data/try create form
 @app.route('/insert_employee',methods = ['POST'])
 def new_worker():
     client = MongoClient('localhost',27017)

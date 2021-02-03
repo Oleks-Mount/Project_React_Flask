@@ -6,8 +6,8 @@ db = psycopg2.connect(dbname="postgres", user="postgres", password="111", host="
 con = db.cursor()
 p_db = con
 
-p_db.execute("create table Employee (id serial primary key,name text,age integer,job text);")
-db.commit()
+"""p_db.execute("create table Employee (id serial primary key,name text,age integer,job text);")
+db.commit()"""
 
 p_db.execute("insert into Employee  (name,age,job) values('Ivan Peshkov',20,'Developer');")
 p_db.execute("insert into Employee  (name,age,job) values('Oleksandr Smith',30,'Doctor');")
