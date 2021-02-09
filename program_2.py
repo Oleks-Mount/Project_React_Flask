@@ -3,12 +3,13 @@ from flask import Flask,render_template,url_for,request,json,jsonify
 from pymongo import MongoClient
 
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder = "client/build",static_folder = "client/build/static")
 
 
 @app.route('/')
 def show_users():
-    pass
+    #url_for('static', filename='style.css')
+    return render_template('index.html')
 
 #display data
 @app.route('/get_employee', methods =['GET'])
